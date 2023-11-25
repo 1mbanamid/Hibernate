@@ -15,13 +15,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users",schema = "public")
 public class User {
-    @Id
     private String username;
-    private String firstname;
-    private String lastname;
-    @Convert(converter = BirthdayConverter.class)
-    @Column(name = "birth_date")
-    private Birthday birthDate;
+    @AttributeOverride(name = "birthDate", column =  @Column(name = "birth_date"))
+    @EmbeddedId
+    private PersonalInfo personalInfo;
+
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
