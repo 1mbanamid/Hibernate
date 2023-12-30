@@ -12,6 +12,10 @@
     <property name="show_sql">true</property>
     <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL10Dialect</property>
     <mapping class="by.imbanamid.entity.User"/>
+    <mapping class="by.imbanamid.entity.Company"/>
+    <mapping class="by.imbanamid.entity.Profile"/>
+    <mapping class="by.imbanamid.entity.Chat"/>
+    <mapping class="by.imbanamid.entity.UserChat"/>
 
     <!-- DB schema will be updated if needed -->
     <!-- <property name="hibernate.hbm2ddl.auto">update</property> -->
